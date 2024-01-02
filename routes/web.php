@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Blog\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +19,14 @@ Route::get('/', function () {
 });
 
 
-
 Route::get('/blank', function () {
     return view('pages-starter');
 });
+
+
+  // Blog Post
+  Route::group(['prefix' => 'blog', 'as' => 'blog.', 'middleware' => ['auth', 'permission:blog']], function () {
+      Route::resource('post', BlogController::class);
+      Route::resource('category', BlogController::class);
+});
+
