@@ -1,8 +1,6 @@
 <?php
 
 namespace App\Http\Controllers\Blog;
-
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -13,9 +11,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        Route::get('/blank', function () {
-            return view('blog.create');
-        });
+     
     }
 
     /**
@@ -23,7 +19,9 @@ class BlogController extends Controller
      */
     public function create()
     {
-        //
+        return view(
+            '/blog/create', []
+        );
     }
 
     /**

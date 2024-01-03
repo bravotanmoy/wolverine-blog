@@ -25,7 +25,7 @@ Route::get('/blank', function () {
 
 
   // Blog Post
-  Route::group(['prefix' => 'blog', 'as' => 'blog.', 'middleware' => ['auth', 'permission:blog']], function () {
+  Route::group(['prefix' => 'blog', 'as' => 'blog.'], function () {
       Route::resource('post', BlogController::class);
       Route::resource('category', BlogController::class);
 });
