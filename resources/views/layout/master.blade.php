@@ -19,6 +19,9 @@
 
         <!-- Icons css -->
         <link href="{{asset('assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
+
+        @yield('page-style')
+
     </head>
 
     <body>
@@ -871,7 +874,7 @@
         <!-- Start Page Content here -->
         <!-- ============================================================== -->
 
-        
+
         @yield('content')
 
         <!-- ============================================================== -->
@@ -882,19 +885,19 @@
 
     </div>
     <!-- END wrapper -->
-    
+
     <!-- Theme Settings -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="theme-settings-offcanvas">
         <div class="d-flex align-items-center bg-primary p-3 offcanvas-header">
             <h5 class="text-white m-0">Theme Settings</h5>
             <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-    
+
         <div class="offcanvas-body p-0">
             <div data-simplebar class="h-100">
                 <div class="p-3">
                     <h5 class="mb-3 fs-16 fw-bold">Color Scheme</h5>
-    
+
                     <div class="row">
                         <div class="col-4">
                             <div class="form-check form-switch card-switch mb-1">
@@ -905,7 +908,7 @@
                             </div>
                             <h5 class="font-14 text-center text-muted mt-2">Light</h5>
                         </div>
-    
+
                         <div class="col-4">
                             <div class="form-check form-switch card-switch mb-1">
                                 <input class="form-check-input" type="checkbox" name="data-bs-theme" id="layout-color-dark" value="dark">
@@ -916,10 +919,10 @@
                             <h5 class="font-14 text-center text-muted mt-2">Dark</h5>
                         </div>
                     </div>
-    
+
                     <div id="layout-width">
                         <h5 class="my-3 fs-16 fw-bold">Layout Mode</h5>
-    
+
                         <div class="row">
                             <div class="col-4">
                                 <div class="form-check form-switch card-switch mb-1">
@@ -930,7 +933,7 @@
                                 </div>
                                 <h5 class="font-14 text-center text-muted mt-2">Fluid</h5>
                             </div>
-    
+
                             <div class="col-4">
                                 <div id="layout-boxed">
                                     <div class="form-check form-switch card-switch mb-1">
@@ -944,9 +947,9 @@
                             </div>
                         </div>
                     </div>
-    
+
                     <h5 class="my-3 fs-16 fw-bold">Topbar Color</h5>
-    
+
                     <div class="row">
                         <div class="col-4">
                             <div class="form-check form-switch card-switch mb-1">
@@ -957,7 +960,7 @@
                             </div>
                             <h5 class="font-14 text-center text-muted mt-2">Light</h5>
                         </div>
-    
+
                         <div class="col-4">
                             <div class="form-check form-switch card-switch mb-1">
                                 <input class="form-check-input" type="checkbox" name="data-topbar-color" id="topbar-color-dark" value="dark">
@@ -968,10 +971,10 @@
                             <h5 class="font-14 text-center text-muted mt-2">Dark</h5>
                         </div>
                     </div>
-    
+
                     <div>
                         <h5 class="my-3 fs-16 fw-bold">Menu Color</h5>
-    
+
                         <div class="row">
                             <div class="col-4">
                                 <div class="form-check form-switch card-switch mb-1">
@@ -982,7 +985,7 @@
                                 </div>
                                 <h5 class="font-14 text-center text-muted mt-2">Light</h5>
                             </div>
-    
+
                             <div class="col-4">
                                 <div class="form-check form-switch card-switch mb-1">
                                     <input class="form-check-input" type="checkbox" name="data-menu-color" id="leftbar-color-dark" value="dark">
@@ -994,10 +997,10 @@
                             </div>
                         </div>
                     </div>
-    
+
                     <div id="sidebar-size">
                         <h5 class="my-3 fs-16 fw-bold">Sidebar Size</h5>
-    
+
                         <div class="row">
                             <div class="col-4">
                                 <div class="form-check form-switch card-switch mb-1">
@@ -1008,7 +1011,7 @@
                                 </div>
                                 <h5 class="font-14 text-center text-muted mt-2">Default</h5>
                             </div>
-    
+
                             <div class="col-4">
                                 <div class="form-check form-switch card-switch mb-1">
                                     <input class="form-check-input" type="checkbox" name="data-sidenav-size" id="leftbar-size-compact" value="compact">
@@ -1018,7 +1021,7 @@
                                 </div>
                                 <h5 class="font-14 text-center text-muted mt-2">Compact</h5>
                             </div>
-    
+
                             <div class="col-4">
                                 <div class="form-check form-switch card-switch mb-1">
                                     <input class="form-check-input" type="checkbox" name="data-sidenav-size" id="leftbar-size-small" value="condensed">
@@ -1028,8 +1031,8 @@
                                 </div>
                                 <h5 class="font-14 text-center text-muted mt-2">Condensed</h5>
                             </div>
-    
-    
+
+
                             <div class="col-4">
                                 <div class="form-check form-switch card-switch mb-1">
                                     <input class="form-check-input" type="checkbox" name="data-sidenav-size" id="leftbar-size-full" value="full">
@@ -1041,14 +1044,14 @@
                             </div>
                         </div>
                     </div>
-    
+
                     <div id="layout-position">
                         <h5 class="my-3 fs-16 fw-bold">Layout Position</h5>
-    
+
                         <div class="btn-group checkbox" role="group">
                             <input type="radio" class="btn-check" name="data-layout-position" id="layout-position-fixed" value="fixed">
                             <label class="btn btn-soft-primary w-sm" for="layout-position-fixed">Fixed</label>
-    
+
                             <input type="radio" class="btn-check" name="data-layout-position" id="layout-position-scrollable" value="scrollable">
                             <label class="btn btn-soft-primary w-sm ms-0" for="layout-position-scrollable">Scrollable</label>
                         </div>
@@ -1064,13 +1067,13 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Vendor js -->
     <script src="{{asset('assets/js/vendor.min.js')}}"></script>
-    
-    <!-- App js -->
-    <script src="{{asset('assets/js/app.min.js')}}"></script>
-    
+
+
+    @yield('vendor-script')
+     <!-- App js -->
+     <script src="{{asset('assets/js/app.min.js')}}"></script>
     </body>
     </html>
-    
