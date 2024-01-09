@@ -55,59 +55,66 @@
                     <div class="card-body">
                         <form action="/" method="post" class="dropzone" id="post-create-form">
 
-                            <div class="row">
-                                <div class="col-lg-8">
-                                  
-                                        <div class="mb-3">
-                                            <label for="simpleinput" class="form-label">Post Title</label>
-                                            <input type="text" id="title-input" class="form-control">
-                                        </div>
-                                     
-                                </div><!-- end title col -->
-                                <div class="col-lg-4">
-                                
-                                        <p class="mb-1 fw-bold text-muted">Category Select</p>
-                                        <select class="form-control select2" data-toggle="select2">
-                                                <option>Select</option>
-                                                <option value="AK">Alaska</option>
-                                                <option value="HI">Hawaii</option>
-                                                <option value="CA">California</option>
-                                                <option value="NV">Nevada</option>
-                                                <option value="OR">Oregon</option>
-                                                <option value="WA">Washington</option>
-                                        </select>
-                                    
-                                </div><!-- end Category col -->
 
-                                <div class="col-lg-8">
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <h4 class="header-title">Post Content</h4>
+                            <div class="row">
+                                <div class="col-8">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="mb-3">
+                                                <label for="title-input" class="form-label">Post Title</label>
+                                                <input type="text" id="title-input" class="form-control">
+                                            </div>
                                         </div>
-                                        <ul class="list-group list-group-flush">
-                                            <li class="list-group-item">
+                                        <div class="col-md-12">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <h4 class="header-title">Post Content</h4>
+                                                </div>
+                                                
                                                 <div class="mb-2">
                                                     <div id="snow-editor" style="height: 300px;">
                                                         <h3><span class="ql-size-large">Hello World!</span></h3>
                                                     </div><!-- end Snow-editor-->
                                                 </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div><!-- end Post Content col-->
-                                <div class="col-lg-4">
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <h4 class="header-title">Feature Image</h4>
+                                                  
+                                            </div>
                                         </div>
-                                        <div class="card-body">
-                                             <input type="file" id="feature-image" class="form-control">
-                                             <div id="image-preview"></div>
-                                        </div>
-                                        <!-- end Feature Image col -->
+
                                     </div>
                                 </div>
+                                <div class="col-4">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <label for="category-select" class="form-label">Category</label>
+                                            <select class="form-control select2 mb-5" id="category-select" data-toggle="select2">
+                                                    <option>Select</option>
+                                                    <option value="AK">Alaska</option>
+                                                    <option value="HI">Hawaii</option>
+                                                    <option value="CA">California</option>
+                                                    <option value="NV">Nevada</option>
+                                                    <option value="OR">Oregon</option>
+                                                    <option value="WA">Washington</option>
+                                            </select>
+                                        </div><!-- end Category col -->
+                                        <div class="col-lg-12 mb-3">
+                                            <label for="feature-image" class="form-label">Feature Image</label>
+                                            <input type="file" id="feature-image" class="form-control">
+                                            <div id="image-preview"></div>
+                                        </div><!-- end Feature Image col -->
+
+                                        <div class="col-12">
+                                            <button type="button" class="btn btn-primary">Primary</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                
+
                             </div>
+
+
                         </form>
                     </div> <!-- end card-body -->
 
